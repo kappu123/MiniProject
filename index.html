@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online-Store</title>
+    <!-- Reset.css file -->
+    <link rel="stylesheet" href="reset.css" />
+    <!-- style.css file -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <title>MOVIES CATEGORY PAGE</title>
+</head>
+<body>
+    <header class="head">
+        <div class="head__logo"><i class="fas fa-film"></i></div>
+  
+        <nav class="head__navItems">
+          <ul>
+            <li class="head__navItems__home"><a href="#">Home</a></li>
+            <li class="head__navItems__about"><a href="#">About Us</a></li>
+            <li class="head__navItems__contact"><a href="#">Contact Us</a></li>
+            <li class="head__navItems__category"><a href="#">Categories</a></li>
+          </ul>
+        </nav>
+  
+        <div class="head__like"><i class="fas fa-heart"></i></div>
+        <div class="head__cart"><i class="fas fa-shopping-cart"></i></div>
+    </header>
+    <section class="poster">
+        <div class="poster__slick">
+          <h2 class="poster1">WHAT WE OFFER</h2>
+        </div>
+        <div class="poster__slick">
+          <h2 class="poster2">WHAT WE OFFER</h2>
+        </div>
+        <div class="poster__slick">
+          <h2 class="poster3">WHAT WE OFFER</h2>
+        </div>
+    </section>
+    <section>
+        <div class="container1">
+            <div class="sidebar">
+                <div id="Sort">
+                    <p>Sort according to Movie Discount</p>
+                </div>
+                <div id="container4">
+                    <input type="checkbox" id="Discount10" name="price" value="10" onclick="handleFilters('10','discounts')">
+                    <label for="price1"> 10 percent off</label><br>
+                    <input type="checkbox" id="Discount20" name="price" value="20" onclick="handleFilters('20','discounts')">
+                    <label for="price2"> 20 percent off</label><br>
+                    <input type="checkbox" id="Discount30" name="price" value="30" onclick="handleFilters('30','discounts')">
+                    <label for="price3"> 30 percent off</label><br><br>
+                </div>
+                <div id="Sort1">
+                    <p>Sort according to Category</p>
+                </div>
+                <div id="container6">
+                    <input type="checkbox" id="Category1" name="cat" value="1" onclick="handleFilters('Shows','categories')">
+                    <label for="price1"> TV SHOWS</label><br>
+                    <input type="checkbox" id="Category2" name="cat" value="2" onclick="handleFilters('TVSeries','categories')">
+                    <label for="price2"> SERIES </label><br>
+                </div>
+                <div id="Sort2">
+                    <p>Sort according to Price</p>
+                </div>
+                <div id="container7">
+                    <label for="price1"> Lowest Price</label><br>
+                    <input type="number" id="price1" name="cat"  onchange="handleFilters(this.value,'minPrice')" >
+                    <br>
+                    <label for="price2"> Highest Price </label><br>
+                    <input type="number" id="price2" name="cat"  onchange="handleFilters(this.value,'maxPrice')">
+                </div>
+            </div>
+            <div class="impcontent">
+                <div class="container2">
+                    <div><p id="disable">Sort by</p></div>
+                    <div><p onclick="handleFilters('descending','sortPrice')">Highest Price</p></div>
+                    <div><p onclick="handleFilters('ascending','sortPrice')">Lowest Price</p></div>
+                    <div><p onclick="handleFilters('descending','sortPopularity')">Popularity</p></div>
+                </div>  
+                <div id="container3">
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <nav class="head__navItems footer__navitems">
+          <ul>
+            <li class="head__navItems__home"><a href="#">Home</a></li>
+            <li class="head__navItems__about"><a href="#">About Us</a></li>
+            <li class="head__navItems__contact"><a href="#">Contact Us</a></li>
+            <li class="head__navItems__category"><a href="#">Categories</a></li>
+          </ul>
+        </nav>
+    </footer>
+    <script src="myscript.js"></script>
+    <script src="slick.js"></script>
+</body>
+</html>
